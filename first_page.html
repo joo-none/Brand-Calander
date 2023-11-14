@@ -2,18 +2,76 @@
 
 <html>
     <head>
+      <style>
+        /* 태그, 클래스, 아이디에 영향을 줄 수 있음 */
+        .js {
+          font-weight: bold;
+          background: red;
+          color: white;
+        }
+
+        </style>
         <meta charset="utf-8">
         <title>브랜드 캘린더</title>
         <link rel="stylesheet" href="'style.css">
     </head>
     <body>
-        <h1>브랜드 캘린더</h1>
-        <form class = 'search'>
+
+        <input id="daynight" type="button" value="night" onclick="
+        if (document.querySelector('#daynight').value==='night') {
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+          document.querySelector('#daynight').value='day';
+        } else {
+          document.querySelector('body').style.backgroundColor = 'white'
+          document.querySelector('body').style.color = 'black'
+          document.querySelector('#daynight').value='night';
+
+        }
+
+        
+        ">
+
+
+        <p>
+          새로운 시간, 무한한 가능성의 순간들. 
+          우리 브랜드는 <span class="js">당신의 매일</span>을 특별하게 만들기 위해 여기 있습니다. 
+          각 페이지가 넘어갈 때마다, 새로운 시작과 기회가 당신을 기다리고 있습니다. 
+          이 캘린더는 단순한 날짜의 나열이 아닙니다.  
+          이는 꿈을 향한 여정, 성취를 향한 당신의 열정을 담은 이야기입니다.  
+          우리는 당신이 각 날을 최대한 활용하고, 모든 순간을 가치 있게 만들기를 바랍니다.  
+          우리와 함께라면, 매일이 특별해집니다.  
+          변화를 두려워하지 마세요.  
+          우리는 당신의 모든 순간을 함께 할 준비가 되어 있습니다.  
+          당신의 삶을 디자인하는데 우리 브랜드가 함께 하기를 바랍니다. 
+        </p>
+        
+        <!-- <form class = 'search'>
             <button class = 'img-button' type = 'submit' name = 'click' value = ''>
                 <i class = 'fas fa-search'></i>
             </button>
-        </form>
+        </form> -->
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+        </div>
+        <div class="search">
+            <div class="container">
+        
+        
+              <div class="input-box">
+                <i class="fa-solid i1 fa-magnifying-glass"></i>
+                <i class="fa-solid fa-keyboard"></i>
+                <i class="fa-solid fa-microphone"></i>
+              </div>
+        
+              <div class="btn-box">
+                <button>검색</button>
 
+              </div>
+        
+            </div>
+          </div>
     </body>
 
 </html>
